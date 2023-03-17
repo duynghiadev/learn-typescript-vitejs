@@ -10,10 +10,15 @@ function App() {
     name: 'John',
     age: 3,
   };
+
+  const handleStudentClick = (student: Student) => {
+    console.log('Student Clicked', student);
+  };
+
   return (
     <div>
       <Header></Header>
-      <StudentCard student={john} />
+      <StudentCard student={john} onClick={handleStudentClick} />
       <Footer></Footer>
     </div>
   );
