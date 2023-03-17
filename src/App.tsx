@@ -1,11 +1,20 @@
 import { useState } from 'react';
 import './App.css';
 
+// pure function
+// impure function
+let run = 0;
+function calcCount() {
+  run += 5;
+  console.log('calc count: ', run);
+  return 10;
+}
+
 function App() {
   let i = 0;
 
   const [showMore, setShowMore] = useState(false);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(calcCount);
   const [name, setName] = useState('duynghiadev');
 
   function handleIncreaseClick() {
